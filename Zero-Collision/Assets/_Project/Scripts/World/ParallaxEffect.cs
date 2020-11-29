@@ -75,8 +75,6 @@ namespace Gisha.ZeroCollision.World
 
             float camCenterX = _cam.transform.position.x;
 
-            Debug.DrawRay(Vector3.right * (camCenterX - 25f), _transform.up * 100f, Color.red);
-
             return (replacingBGMaxX - (camCenterX - 25f)) < 0;
         }
     }
