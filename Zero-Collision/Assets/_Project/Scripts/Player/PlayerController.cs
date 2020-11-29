@@ -1,4 +1,5 @@
 ﻿using Gisha.Effects.Audio;
+using Gisha.Effects.VFX;
 using Gisha.ZeroCollision.Game;
 using UnityEngine;
 
@@ -87,6 +88,7 @@ namespace Gisha.ZeroCollision.Player
             GameManager.Instance.Lose();
 
             AudioManager.Instance.PlaySFX("error_007");
+            VFXManager.Instance.PoolEmit("Explosion", _transform.position, Quaternion.identity);
         }
 
         #endregion
