@@ -12,4 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61762076131330a42a114809ff7d371d, type: 3}
   m_Name: PoolObjectsCollection
   m_EditorClassIdentifier: 
-  poolObjects: []
+  poolObjects:
+  - name: Obstacle
+    prefabs:
+    - {fileID: 5176651714937948652, guid: 2eb10e9d3e71c284ab777c7e37e5058a, type: 3}
+    initCount: 5

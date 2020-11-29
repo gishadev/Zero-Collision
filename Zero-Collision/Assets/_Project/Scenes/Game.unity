@@ -167,6 +167,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstaclePrefab: {fileID: 5176651714937948652, guid: 2eb10e9d3e71c284ab777c7e37e5058a, type: 3}
+  minDistToSpawn: -5
+  maxDistToSpawn: 5
+  despawnDist: 10
 --- !u!4 &335465030
 Transform:
   m_ObjectHideFlags: 0
