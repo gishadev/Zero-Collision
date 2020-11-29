@@ -16,11 +16,9 @@ namespace Gisha.ZeroCollision.Player
 
         Transform _transform;
         Camera _cam;
-        GameManager _gameManager;
 
         private void Awake()
         {
-            _gameManager = FindObjectOfType<GameManager>();
             _cam = Camera.main;
             _transform = transform;
         }
@@ -28,6 +26,9 @@ namespace Gisha.ZeroCollision.Player
         private void Update()
         {
             HorizontalMovement();
+
+            if (!GameManager.Instance.IsPlaying)
+                return;
 
             if (Input.GetKey(KeyCode.Space) || Input.GetMouseButton(0))
                 RotateAnticlockwise();
@@ -39,7 +40,7 @@ namespace Gisha.ZeroCollision.Player
 
         private void LateUpdate()
         {
-            if (IsOutOfBounds(_transform.position)) _gameManager.Lose();
+            if (IsOutOfBounds(_transform.position)) GameManager.Instance.Lose();
         }
 
         #region Movement
@@ -63,17 +64,17 @@ namespace Gisha.ZeroCollision.Player
         void ApplyRotation() => _transform.rotation = Quaternion.AngleAxis(_zAngle, Vector3.forward);
         #endregion
 
-        #region Lose/Score
+        #region Loosing
 
         bool IsOutOfBounds(Vector3 position) => Mathf.Abs(position.y) > _cam.orthographicSize;
 
         private void OnTriggerEnter2D(Collider2D other)
         {
             if (other.CompareTag("Obstacle"))
-                _gameManager.Lose();
+                GameManager.Instance.Lose();
 
             if (other.CompareTag("Score"))
-                _gameManager.AddScore();
+                GameManager.Instance.AddScore();
         }
 
         #endregion

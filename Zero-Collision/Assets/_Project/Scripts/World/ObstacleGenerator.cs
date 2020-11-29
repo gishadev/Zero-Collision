@@ -1,4 +1,5 @@
 ﻿using Gisha.Optimisation;
+using Gisha.ZeroCollision.Game;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -33,6 +34,9 @@ namespace Gisha.ZeroCollision.World
 
         private void LateUpdate()
         {
+            if (!GameManager.Instance.IsPlaying)
+                return;
+
             if (IsReadyToSpawn())
             {
                 Vector2 newPos = PositionOutOfCameraView + Vector2.up * GetRandomHeight();
