@@ -71,6 +71,9 @@ namespace Gisha.ZeroCollision.Player
         {
             if (other.CompareTag("Obstacle"))
                 _gameManager.Lose();
+
+            if (other.CompareTag("Score"))
+                _gameManager.AddScore();
         }
 
         #endregion
