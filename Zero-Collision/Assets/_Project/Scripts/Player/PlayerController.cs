@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Gisha.ZeroCollision.Game;
+using UnityEngine;
 
 namespace Gisha.ZeroCollision.Player
 {
@@ -11,12 +12,13 @@ namespace Gisha.ZeroCollision.Player
         [SerializeField] private float maxAngle = default;
         [SerializeField] private float minAngle = default;
 
-
+        GameManager _gameManager;
         Transform _transform;
         float _zAngle;
 
         private void Awake()
         {
+            _gameManager = FindObjectOfType<GameManager>();
             _transform = transform;
         }
 
@@ -32,6 +34,12 @@ namespace Gisha.ZeroCollision.Player
             ApplyRotation();
         }
 
+        private void LateUpdate()
+        {
+            
+        }
+
+        #region Movement
         void HorizontalMovement()
         {
             _transform.Translate(Vector2.right * horizontalSpeed * Time.deltaTime);
@@ -50,5 +58,16 @@ namespace Gisha.ZeroCollision.Player
         }
 
         void ApplyRotation() => _transform.rotation = Quaternion.AngleAxis(_zAngle, Vector3.forward);
+        #endregion
+
+        #region Lose/Score
+
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+            if (other.CompareTag("Obstacle"))
+                _gameManager.Lose();
+        }
+
+        #endregion
     }
 }
