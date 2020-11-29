@@ -61,8 +61,7 @@ namespace Gisha.ZeroCollision.Game
 
         public void Lose()
         {
-            Debug.Log("You Lose!");
-            SceneManager.LoadScene(0);
+            Blackout.Instance.EnterBlackout();
         }
 
         public void AddScore()

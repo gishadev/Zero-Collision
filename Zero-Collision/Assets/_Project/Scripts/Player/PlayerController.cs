@@ -40,7 +40,7 @@ namespace Gisha.ZeroCollision.Player
 
         private void LateUpdate()
         {
-            if (IsOutOfBounds(_transform.position)) GameManager.Instance.Lose();
+            if (IsOutOfBounds(_transform.position)) Die();
         }
 
         #region Movement
@@ -71,10 +71,16 @@ namespace Gisha.ZeroCollision.Player
         private void OnTriggerEnter2D(Collider2D other)
         {
             if (other.CompareTag("Obstacle"))
-                GameManager.Instance.Lose();
+                Die();
 
             if (other.CompareTag("Score"))
                 GameManager.Instance.AddScore();
+        }
+
+        void Die()
+        {
+            gameObject.SetActive(false);
+            GameManager.Instance.Lose();
         }
 
         #endregion
