@@ -6,13 +6,18 @@ namespace Gisha.ZeroCollision.World
 {
     public class ObstacleGenerator : MonoBehaviour
     {
-        [Header("Spawning")]
+        [Header("Prefab")]
         [SerializeField] private GameObject obstaclePrefab = default;
 
+        [Header("Distance To Spawn")]
         [SerializeField] private float minDistToSpawn = default;
         [SerializeField] private float maxDistToSpawn = default;
 
-        public Vector2 PositionOutOfCameraView 
+        [Header("Heights")]
+        [SerializeField] private float minHeight = default;
+        [SerializeField] private float maxHeight = default;
+
+        public Vector2 PositionOutOfCameraView
             => (Vector2)_cam.transform.position + Vector2.right * (_cam.orthographicSize * Screen.width / Screen.height + 1.25f);
 
         List<GameObject> _obstaclesList = new List<GameObject>();
@@ -30,22 +35,25 @@ namespace Gisha.ZeroCollision.World
         {
             if (IsReadyToSpawn())
             {
-                SpawnObstacle(PositionOutOfCameraView);
+                Vector2 newPos = PositionOutOfCameraView + Vector2.up * GetRandomHeight();
+                SpawnObstacle(newPos);
                 _distToSpawn = Random.Range(minDistToSpawn, maxDistToSpawn);
             }
         }
 
-        bool IsReadyToSpawn()
-            => _lastSpawnedTrans == null || (_lastSpawnedTrans.position - _cam.transform.position).x < _distToSpawn;
-
         void SpawnObstacle(Vector2 newPosition)
         {
-            GameObject o = PoolManager.Instantiate(obstaclePrefab, newPosition, Quaternion.identity);
+            var o = PoolManager.Instantiate(obstaclePrefab, newPosition, Quaternion.identity);
 
             if (!_obstaclesList.Contains(o))
                 _obstaclesList.Add(o);
 
             _lastSpawnedTrans = o.transform;
         }
+
+        float GetRandomHeight() => Random.Range(minHeight, maxHeight);
+        bool IsReadyToSpawn()
+            => _lastSpawnedTrans == null || (_lastSpawnedTrans.position - _cam.transform.position).x < _distToSpawn;
+
     }
 }
