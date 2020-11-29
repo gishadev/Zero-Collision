@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace Gisha.ZeroCollision.BG
+namespace Gisha.ZeroCollision.World
 {
     public class ParallaxEffect : MonoBehaviour
     {
