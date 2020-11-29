@@ -1,4 +1,5 @@
-﻿using Gisha.ZeroCollision.UI;
+﻿using Gisha.Effects.Audio;
+using Gisha.ZeroCollision.UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -57,6 +58,8 @@ namespace Gisha.ZeroCollision.Game
             IsPlaying = true;
 
             _UI.OnPlay();
+
+            AudioManager.Instance.PlaySFX("confirmation_002");
         }
 
         public void Lose()

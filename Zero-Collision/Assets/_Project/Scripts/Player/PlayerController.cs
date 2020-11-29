@@ -1,4 +1,5 @@
-﻿using Gisha.ZeroCollision.Game;
+﻿using Gisha.Effects.Audio;
+using Gisha.ZeroCollision.Game;
 using UnityEngine;
 
 namespace Gisha.ZeroCollision.Player
@@ -74,13 +75,18 @@ namespace Gisha.ZeroCollision.Player
                 Die();
 
             if (other.CompareTag("Score"))
+            {
                 GameManager.Instance.AddScore();
+                AudioManager.Instance.PlaySFX("drop_004");
+            }
         }
 
         void Die()
         {
             gameObject.SetActive(false);
             GameManager.Instance.Lose();
+
+            AudioManager.Instance.PlaySFX("error_007");
         }
 
         #endregion

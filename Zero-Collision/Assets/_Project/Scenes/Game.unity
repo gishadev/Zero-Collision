@@ -215,7 +215,7 @@ RectTransform:
   m_Children:
   - {fileID: 849631603}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -435,7 +435,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1809504790}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &360134927
 MonoBehaviour:
@@ -461,7 +461,7 @@ GameObject:
   - component: {fileID: 431966906}
   - component: {fileID: 431966907}
   m_Layer: 0
-  m_Name: Audio Manager
+  m_Name: Audio Instance
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -474,11 +474,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 431966905}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1809504790}
+  m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &431966907
@@ -493,8 +493,614 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecf4889b9d97c794d84d0d3cfaf98388, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicCollection: []
-  sfxCollection: []
+  musicCollection:
+  - name: Music
+    audioClip: {fileID: 8300000, guid: b5b888695f4a9db4d95ebff480462eaf, type: 3}
+    isLooping: 1
+    isFade: 0
+    volume: 0.5
+    pitch: 1
+  sfxCollection:
+  - name: back_001
+    audioClip: {fileID: 8300000, guid: 15f641667a5361c4a918578d16d13807, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: back_002
+    audioClip: {fileID: 8300000, guid: d78a2386f51a66b41b1dcf2ed1ea87d3, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: back_003
+    audioClip: {fileID: 8300000, guid: 3c933632bbf403e4a93a14d55809ce45, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: back_004
+    audioClip: {fileID: 8300000, guid: 1027b39ce9bf4774abc46e39f8f8da4a, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: bong_001
+    audioClip: {fileID: 8300000, guid: adc5e66ac9c99ee44bb258896e191a3d, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: click_001
+    audioClip: {fileID: 8300000, guid: f3df18f1918d94547865637e5c9c9a13, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: click_002
+    audioClip: {fileID: 8300000, guid: f7c1932482f7e2947b3e0dc01e3f67c2, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: click_003
+    audioClip: {fileID: 8300000, guid: 3ee49dcae48cf61439c3ebf9b07a7fe3, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: click_004
+    audioClip: {fileID: 8300000, guid: 7d540e5c4aa84f64f9d6583498d3df33, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: click_005
+    audioClip: {fileID: 8300000, guid: b4fecd0686ab21f4aa7120b6624a67fb, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: close_001
+    audioClip: {fileID: 8300000, guid: 5b96fc9bfc1c04540912fb7b4e6016d6, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: close_002
+    audioClip: {fileID: 8300000, guid: 2cb16eda718eda6499ed16d3966cb320, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: close_003
+    audioClip: {fileID: 8300000, guid: c2017db570415394a91c1764884760d3, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: close_004
+    audioClip: {fileID: 8300000, guid: a1618a25ea5285b4a894f7f46085b604, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: confirmation_001
+    audioClip: {fileID: 8300000, guid: c0cfe1d6ff29cb34d8e8db5b6306a2a2, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: confirmation_002
+    audioClip: {fileID: 8300000, guid: 8a9786d09ca5f3d47aaff7075f25ab69, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: confirmation_003
+    audioClip: {fileID: 8300000, guid: e4f853b0a030b4441b6336a6c2f6271f, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: confirmation_004
+    audioClip: {fileID: 8300000, guid: df130e1b18f4500479f9050bb7d896a8, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: drop_001
+    audioClip: {fileID: 8300000, guid: 5a0a86346383aed45a9c137c5fe9a628, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: drop_002
+    audioClip: {fileID: 8300000, guid: 346f824c5384849409757231bd968f3c, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: drop_003
+    audioClip: {fileID: 8300000, guid: e9c9326d4d6d1354f91f5f500543fa6c, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: drop_004
+    audioClip: {fileID: 8300000, guid: 5177c71ddee217c4d90c9bc24332a7cc, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: error_001
+    audioClip: {fileID: 8300000, guid: b3f69df2cac05fe4a9bdb31aefd0d293, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: error_002
+    audioClip: {fileID: 8300000, guid: 57afa8608cfd0f741a1f0d860c273108, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: error_003
+    audioClip: {fileID: 8300000, guid: b29d5fe0b90e9dc4bbc7f6945adf1f4e, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: error_004
+    audioClip: {fileID: 8300000, guid: ca2cd7b259dc6fa42af09e5ae4ea4cc6, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: error_005
+    audioClip: {fileID: 8300000, guid: e4dce7d52a305444e8feca80d7f78d2b, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: error_006
+    audioClip: {fileID: 8300000, guid: 25afe731eaf757c448eeee322c16eb06, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: error_007
+    audioClip: {fileID: 8300000, guid: 78ffea392e4c52849b5dae2d0a8a57ff, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: error_008
+    audioClip: {fileID: 8300000, guid: 3be91685487a6f84bb30abdae8b5ec8c, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: glass_001
+    audioClip: {fileID: 8300000, guid: 3ced4876fca423f4399b31a822c790d4, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: glass_002
+    audioClip: {fileID: 8300000, guid: 5b166a2abbb9b0649b148f99d2d8c54b, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: glass_003
+    audioClip: {fileID: 8300000, guid: c50791bde46e4174b87f0fb2e3ba88b9, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: glass_004
+    audioClip: {fileID: 8300000, guid: e87bb593803cd5d42b64e2e83d5bfe88, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: glass_005
+    audioClip: {fileID: 8300000, guid: 6ceea12430004a54890f687fbe07706c, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: glass_006
+    audioClip: {fileID: 8300000, guid: 8ba5d5ed5353e1d44adcb6cefbba24ed, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: glitch_001
+    audioClip: {fileID: 8300000, guid: 02c35d444d3e4e5488479a8ccf32e17a, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: glitch_002
+    audioClip: {fileID: 8300000, guid: 4540080c5062d9c48a26b02e7a86f4fd, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: glitch_003
+    audioClip: {fileID: 8300000, guid: 7b78871a9bfe9474085f52441748f24b, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: glitch_004
+    audioClip: {fileID: 8300000, guid: d9dd93a9838fcff49bfa08451bd2631e, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: maximize_001
+    audioClip: {fileID: 8300000, guid: 290841d3614673749878b981ec5c0229, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: maximize_002
+    audioClip: {fileID: 8300000, guid: 12eca84a82f54fd42915d9df84d1c940, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: maximize_003
+    audioClip: {fileID: 8300000, guid: 666037ce900cd214e9c429348fb22e3f, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: maximize_004
+    audioClip: {fileID: 8300000, guid: ef6c8598fa4346a42ae46f4e59a2760c, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: maximize_005
+    audioClip: {fileID: 8300000, guid: ce8eb3d28608d564481df6ef0029b2af, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: maximize_006
+    audioClip: {fileID: 8300000, guid: a5204f5a003def043b08c681fc0bb832, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: maximize_007
+    audioClip: {fileID: 8300000, guid: 301fd0b4569fbe844ba899f0aa0319d3, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: maximize_008
+    audioClip: {fileID: 8300000, guid: c18adaa8a6b884a47b91d7be47fb7868, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: maximize_009
+    audioClip: {fileID: 8300000, guid: c4d3f6f0a456ff24eb795944b38730bd, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: minimize_001
+    audioClip: {fileID: 8300000, guid: 8f14c24a9e8e5b94398094807f0891c1, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: minimize_002
+    audioClip: {fileID: 8300000, guid: 8476259061600144da04d2be5d2da7b1, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: minimize_003
+    audioClip: {fileID: 8300000, guid: af794217ccc5e784f91048db22ca4c4a, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: minimize_004
+    audioClip: {fileID: 8300000, guid: 6a5aeebbe0e4a1f47af086c8c1bd85de, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: minimize_005
+    audioClip: {fileID: 8300000, guid: c9b83412bbe5f0e49ac7c7148bb72cbc, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: minimize_006
+    audioClip: {fileID: 8300000, guid: 68f2c58c14eab2e408c394cb0a044e66, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: minimize_007
+    audioClip: {fileID: 8300000, guid: f81e913ffed976349b3a0e462a9b93cd, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: minimize_008
+    audioClip: {fileID: 8300000, guid: 89643c2778d694c498b4804cb7c699a7, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: minimize_009
+    audioClip: {fileID: 8300000, guid: 1e2dc572c8b7ae04e8d6a34c09c9f58d, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: open_001
+    audioClip: {fileID: 8300000, guid: 815069cf108703c4e9cb378a53fcab11, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: open_002
+    audioClip: {fileID: 8300000, guid: 417160fb1bfd640499f235d1f1f401f9, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: open_003
+    audioClip: {fileID: 8300000, guid: 96f3082481411274f8c30d6410acac5a, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: open_004
+    audioClip: {fileID: 8300000, guid: 9064664becbde2d4c8721a5225f0e990, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: pluck_001
+    audioClip: {fileID: 8300000, guid: 45669ed7ffd5ede4fa3380db5767363c, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: pluck_002
+    audioClip: {fileID: 8300000, guid: 92d2c872aa7bc594983d18b18a45c484, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: question_001
+    audioClip: {fileID: 8300000, guid: 86c82ce6cf4389548861eb6804c696e7, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: question_002
+    audioClip: {fileID: 8300000, guid: 6872c42428085ff4cb3465411f8edc5f, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: question_003
+    audioClip: {fileID: 8300000, guid: 040cf769300f53048a0facdaba0196f3, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: question_004
+    audioClip: {fileID: 8300000, guid: 6b9bab631f2de5d4783eaf7cad4363bf, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: scratch_001
+    audioClip: {fileID: 8300000, guid: 7f390b9ae919de04abee96b96e3295d3, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: scratch_002
+    audioClip: {fileID: 8300000, guid: 5a1206b5c1beffd48a7ba362964ad969, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: scratch_003
+    audioClip: {fileID: 8300000, guid: 35915dcff11854f45947fc399e550469, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: scratch_004
+    audioClip: {fileID: 8300000, guid: 80832fc796d4e0f498f3e7e15de342e7, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: scratch_005
+    audioClip: {fileID: 8300000, guid: 1c17582ebce9835419a6e32a692585df, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: scroll_001
+    audioClip: {fileID: 8300000, guid: 1dc447ede4d2b644eb9e2d819703e8bb, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: scroll_002
+    audioClip: {fileID: 8300000, guid: 09140a422382bdd469fc46c20fc045c3, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: scroll_003
+    audioClip: {fileID: 8300000, guid: 4a13e075a84c9fc40afe08bd2a83b736, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: scroll_004
+    audioClip: {fileID: 8300000, guid: c1d3a9d8ea211da46ab762b9938cf401, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: scroll_005
+    audioClip: {fileID: 8300000, guid: 5d8d51be3e59e824880c21561dfb7817, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: select_001
+    audioClip: {fileID: 8300000, guid: 3548db6a361b31c4eb2d14c844417d95, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: select_002
+    audioClip: {fileID: 8300000, guid: ddb801229af11ae499207c54503c4b2f, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: select_003
+    audioClip: {fileID: 8300000, guid: 01859239555c6754d8aeb88276d28570, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: select_004
+    audioClip: {fileID: 8300000, guid: 009df028323e31542a02a45758d558c1, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: select_005
+    audioClip: {fileID: 8300000, guid: 884c9bfdbf5aaf240b7b5ecd1f72e125, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: select_006
+    audioClip: {fileID: 8300000, guid: afad608ffed7a80499f3d9a75c5a1138, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: select_007
+    audioClip: {fileID: 8300000, guid: 50b929f352f382d4e8f5ec43abc19678, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: select_008
+    audioClip: {fileID: 8300000, guid: a804ed18c83e3ea4c94d1f9d642bd7b7, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: switch_001
+    audioClip: {fileID: 8300000, guid: b8ba73c3234b6144dac94adc1cbfd390, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: switch_002
+    audioClip: {fileID: 8300000, guid: 51447cbb14270714eb9f8846d0d34590, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: switch_003
+    audioClip: {fileID: 8300000, guid: 44994af41580d0e48bd4bcea877811d2, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: switch_004
+    audioClip: {fileID: 8300000, guid: 142b367d039204549bc68f0ad462c023, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: switch_005
+    audioClip: {fileID: 8300000, guid: 1b94f85a37b773148a067bf592c72556, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: switch_006
+    audioClip: {fileID: 8300000, guid: d8a15ac84a95fda439f71760f486683d, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: switch_007
+    audioClip: {fileID: 8300000, guid: a63600380b977954c9301768211dc4e9, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: tick_001
+    audioClip: {fileID: 8300000, guid: 47091f8b980d9354f9c346ca111219b7, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: tick_002
+    audioClip: {fileID: 8300000, guid: aba13d5833222954986435f4121c29f9, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: tick_004
+    audioClip: {fileID: 8300000, guid: f6e1b565c36c695418637d7c164ddea9, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: toggle_001
+    audioClip: {fileID: 8300000, guid: 9933c6c959fc15b4db9e263fa1130688, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: toggle_002
+    audioClip: {fileID: 8300000, guid: 3daf357b4e37ca148a3ba93ccb93e845, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: toggle_003
+    audioClip: {fileID: 8300000, guid: 90ffb6bcfcb3a304d86e419168e1539f, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
+  - name: toggle_004
+    audioClip: {fileID: 8300000, guid: f4962e3b8fea5f447a226eaf3b8b2e12, type: 3}
+    isLooping: 0
+    isFade: 0
+    volume: 1
+    pitch: 1
   fadeTransitionSpeed: 0
 --- !u!1 &519420028
 GameObject:
@@ -690,7 +1296,7 @@ RectTransform:
   - {fileID: 1067708276}
   - {fileID: 2140207526}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1386,7 +1992,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1363041626
 GameObject:
@@ -1680,10 +2286,9 @@ Transform:
   m_Children:
   - {fileID: 1716188888}
   - {fileID: 118343517}
-  - {fileID: 431966906}
   - {fileID: 360134926}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2021620576
 GameObject:
@@ -1885,7 +2490,7 @@ Transform:
   m_Children:
   - {fileID: 1363041627}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2025792706
 MonoBehaviour:
